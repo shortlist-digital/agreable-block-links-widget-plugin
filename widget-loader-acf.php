@@ -52,6 +52,7 @@ $widget_config =array (
 					'label' => 'Link',
 					'name' => 'link',
 					'type' => 'url',
+					'required' => 1,
 				),
 				array (
 					'key' => 'widget_' . $key . '_feature_block',
