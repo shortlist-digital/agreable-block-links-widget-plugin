@@ -60,13 +60,13 @@ $widget_config =array (
 					'name' => 'feature_block',
 					'type' => 'true_false',
 				)
-			),
-			array (
-				'key' => 'widget_' . $key . '_advanced_details_tab',
-				'label' => 'Advanced Details',
-				'type' => 'tab',
-				'placement' => $widgetplacement,
 			)
+		),
+		array (
+			'key' => 'widget_' . $key . '_advanced_details_tab',
+			'label' => 'Advanced Details',
+			'type' => 'tab',
+			'placement' => $widgetplacement,
 		)
 	)
 );
