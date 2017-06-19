@@ -30,7 +30,7 @@ $widget_config =array (
 					'name' => 'background_image',
 					'type' => 'image',
 					'required' => 1,
-					'return_format' => 'url',
+					'return_format' => 'array',
 					'preview_size' => 'medium',
 					'library' => 'all',
 				),
