@@ -51,7 +51,8 @@ $widget_config =array (
 					'key' => 'widget_' . $key . '_link',
 					'label' => 'Link',
 					'name' => 'link',
-					'type' => 'url',
+					'type' => 'text',
+					'instructions' => "External link example:<br> http://www.google.co.uk <br><br>Internal link example:<br> /food-guide",
 					'required' => 1,
 				),
 				array (
