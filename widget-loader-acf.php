@@ -1,21 +1,21 @@
 <?php
 
-$key = 'block_links';
+$key = 'widget_block_links';
 $widgetplacement = self::$config['tab_placement'];
 
 $widget_config =array (
-	'key' => 'widget_' . $key,
-	'name' => $key,
+	'key' => $key,
+	'name' => 'block_links',
 	'label' => 'Block links',
 	'sub_fields' => array (
 		array (
-			'key' => 'widget_' . $key . '_basic_details_tab',
+			'key' => $key . '_basic_details_tab',
 			'label' => 'Basic Details',
 			'type' => 'tab',
 			'placement' => $widgetplacement,
 		),
 		array (
-			'key' => 'widget_' . $key . '_blocks',
+			'key' => $key . '_blocks',
 			'label' => 'Blocks',
 			'name' => 'blocks',
 			'type' => 'repeater',
@@ -25,7 +25,7 @@ $widget_config =array (
 			'button_label' => 'Add block',
 			'sub_fields' => array (
 				array (
-					'key' => 'widget_' . $key . '_background_image',
+					'key' => $key . '_background_image',
 					'label' => 'Background image',
 					'name' => 'background_image',
 					'type' => 'image',
@@ -35,27 +35,28 @@ $widget_config =array (
 					'library' => 'all',
 				),
 				array (
-					'key' => 'widget_' . $key . '_title',
+					'key' => $key . '_title',
 					'label' => 'Title',
 					'name' => 'title',
 					'type' => 'text',
 					'required' => 1,
 				),
 				array (
-					'key' => 'widget_' . $key . '_sell',
+					'key' => $key . '_sell',
 					'label' => 'Sell',
 					'name' => 'sell',
 					'type' => 'text',
 				),
 				array (
-					'key' => 'widget_' . $key . '_link',
+					'key' => $key . '_link',
 					'label' => 'Link',
 					'name' => 'link',
-					'type' => 'url',
+					'type' => 'text',
+					'instructions' => "External link example:<br> http://www.google.co.uk <br><br>Internal link example:<br> /food-guide",
 					'required' => 1,
 				),
 				array (
-					'key' => 'widget_' . $key . '_feature_block',
+					'key' => $key . '_feature_block',
 					'label' => 'Feature block',
 					'name' => 'feature_block',
 					'type' => 'true_false',
@@ -63,7 +64,7 @@ $widget_config =array (
 			)
 		),
 		array (
-			'key' => 'widget_' . $key . '_advanced_details_tab',
+			'key' => $key . '_advanced_details_tab',
 			'label' => 'Advanced Details',
 			'type' => 'tab',
 			'placement' => $widgetplacement,
@@ -71,5 +72,6 @@ $widget_config =array (
 	)
 );
 
-$widget_config["content-types"] = array('category', 'page');
+$widget_config["content-types"] = get_option("options_" . $key . "_available_post_types");
+
 $widget_config["content-sizes"] = array('main');
